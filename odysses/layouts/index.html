@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{ partial "header"}}
+</head>
+<body>
+    {{ range .Site.Data.myth }}
+       {{ .name }} {{ .power }} <br>
+    {{ end }}
+
+</body>
+<footer> {{ partial "footer" }} </footer>
+</html>
