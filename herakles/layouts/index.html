@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forest Vibes Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Forest Vibes Homepage</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>About Us</h2>
+            <p>Insert your forest-themed content here.</p>
+        </section>
+
+        <section>
+            <h2>Featured blog articles</h2>
+            <ul>
+                {{ range (.Site.GetPage "section" "cont").Pages }}
+                    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                {{ end }}
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2022 Forest Vibes. All rights reserved.</p>
+    </footer>
+</body>
+</html>
