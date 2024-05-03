@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+        header {
+            background-color: orange;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FENIX</h1>
+    </header>
+    {{.Content}}
+    {{ range .Pages }}
+        <article>
+            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <p>{{ .Description }}</p>
+        </article>
+
+    {{ end }}
+</body>
+</html>
