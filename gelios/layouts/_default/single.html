@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Green Header</title>
+    <style>
+        .header {
+            background-color: green;
+            color: white;
+            padding: 20px;
+        }
+
+        .darker-header {
+            background-color: darkgreen;
+            color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to my website!</h1>
+    </div>
+
+    <div class="darker-header">
+        <h2>About Me</h2>
+    </div>
+
+    <p> {{ .Content }} </p>
+</body>
+</html>
