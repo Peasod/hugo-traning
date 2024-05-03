@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Orange Page</title>
+    <style>
+        body {
+            background-color: orange;
+        }
+        
+        header {
+            background-color: darkorange;
+            padding: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> {{ .Title }} </h1>
+    </header>
+    {{ range .Pages }}
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        
+    {{ end }}
+    
+</body>
+</html>
