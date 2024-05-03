@@ -16,10 +16,12 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to the Orange Page!</h1>
+        <h1> {{ .Title }} </h1>
     </header>
-    
-    <h2> {{ .Content }}</h2>
+    {{ range .Pages }}
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        
+    {{ end }}
     
 </body>
 </html>
